@@ -1,0 +1,9 @@
+{
+    "cmake.configureEnvironment": {
+        "CUDACXX": "/usr/local/cuda-12.6/bin/nvcc",
+        "PATH": "${env:PATH}:/usr/local/cuda-12.6/bin"
+    },
+    "cmake.sourceDirectory": "${workspaceFolder}",
+    "cmake.buildDirectory": "${workspaceFolder}/build",
+    "cmake.generator": "Unix Makefiles"
+}
