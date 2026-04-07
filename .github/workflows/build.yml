@@ -1,0 +1,25 @@
+name: CUDA Build
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Install CUDA
+      run: |
+        sudo apt update
+        sudo apt install -y nvidia-cuda-toolkit
+
+    - name: Build project
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make
